@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Start Earning With Digital Skills</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- TikTok Pixel -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject = t;
+    var ttq = w[t] = w[t] || [];
+    ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+    ttq.setAndDefer = function (t, e) {
+      t[e] = function () {
+        t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+      }
+    };
+    for (var i = 0; i < ttq.methods.length; i++) {
+      ttq.setAndDefer(ttq, ttq.methods[i]);
+    }
+    ttq.load('YOUR_PIXEL_ID_HERE');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- End TikTok Pixel -->
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #e9f9f4, #eef4ff);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      max-width: 420px;
+      width: 100%;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    h1 { font-size: 20px; }
+    h1 span { color: #e63946; }
+    h2 {
+      font-size: 16px;
+      text-decoration: underline;
+      margin: 16px 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    ul li::before {
+      content: "✔ ";
+      color: green;
+      font-weight: bold;
+    }
+    .affirmation {
+      background: #eafaf1;
+      border-left: 5px solid #16a34a;
+      padding: 14px;
+      margin: 20px 0;
+      text-align: left;
+    }
+    .btn {
+      display: block;
+      padding: 14px;
+      background: #16a34a;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #666;
+    }
+    /* Added styles for the form */
+    form {
+      margin-top: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    button.btn {
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <h1>In order to<br><span>Start Earning Good Money With High Digital Skills...</span></h1>
+
+    <h2>You Will Need These 3 Things</h2>
+
+    <ul>
+      <li>An internet-connected smartphone, tablet or laptop</li>
+      <li>1–2 hrs a day</li>
+      <li>A spirit of implementation and dedication</li>
+    </ul>
+
+    <div class="affirmation">
+      <strong>YES!</strong> I’m ready to apply this life-changing information.
+    </div>
+
+    <!-- Modified form for client-side validation and redirect, no backend -->
+    <form id="registrationForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required minlength="2">
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required minlength="10">
+      <button type="submit" class="btn">CLICK HERE TO REGISTER NOW!</button>
+    </form>
+
+    <p style="font-size: 12px; color: #666; margin-top: 10px;">Your information is safe with us and will only be used for registration purposes.</p>
+
+    <footer>© 2026 High Posting Jobs</footer>
+  </div>
+
+  <!-- Added JavaScript for validation and redirect -->
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const form = event.target;
+      if (form.checkValidity()) {
+        // Fields are valid, redirect to thankyou.html without sending data
+        window.location.href = 'thankyou.html';
+      } else {
+        // Browser will show validation errors
+        form.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>
