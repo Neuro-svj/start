@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- TikTok Pixel -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject = t;
+    var ttq = w[t] = w[t] || [];
+    ttq.methods = ["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"];
+    ttq.setAndDefer = function (t, e) {
+      t[e] = function () {
+        t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+      }
+    };
+    for (var i = 0; i < ttq.methods.length; i++) {
+      ttq.setAndDefer(ttq, ttq.methods[i]);
+    }
+    ttq.load('YOUR_PIXEL_ID_HERE');
+    ttq.page();
+    ttq.track('CompleteRegistration');
+  }(window, document, 'ttq');
+  </script>
+  <!-- End Pixel -->
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f9fafb;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+
+  <script>
+    setTimeout(function () {
+      window.location.href = "https://chat.whatsapp.com/LZvJgpRyLPY18uoTcolKUh";
+    }, 2000);
+  </script>
+</head>
+
+<body>
+  <div>
+    <h2>You're in! 🎉</h2>
+    <p>Redirecting you to the WhatsApp group…</p>
+  </div>
+</body>
+</html>
