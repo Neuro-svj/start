@@ -69,11 +69,18 @@
     .btn {
       display: block;
       padding: 14px;
-      background: #16a34a;
       color: white;
       text-decoration: none;
       border-radius: 10px;
       font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .whatsapp {
+      background: #25D366; /* Green for WhatsApp */
+    }
+    .telegram {
+      background: #0088cc; /* Blue for Telegram */
     }
     footer {
       margin-top: 14px;
@@ -84,19 +91,13 @@
     form {
       margin-top: 20px;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
+    input[type="text"] {
       width: 100%;
       padding: 12px;
       margin: 8px 0;
       border: 1px solid #ddd;
       border-radius: 8px;
       box-sizing: border-box;
-    }
-    button.btn {
-      border: none;
-      cursor: pointer;
     }
   </style>
 </head>
@@ -117,12 +118,11 @@
       <strong>YES!</strong> I’m ready to apply this life-changing information.
     </div>
 
-    <!-- Modified form for client-side validation and redirect, no backend -->
+    <!-- Modified form for client-side validation -->
     <form id="registrationForm">
       <input type="text" id="name" name="name" placeholder="Your Name" required minlength="2">
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required minlength="10">
-      <button type="submit" class="btn">CLICK HERE TO REGISTER NOW!</button>
+      <button type="button" class="btn whatsapp" onclick="redirectToThankYou('whatsapp')">I prefer to join on Whatsapp</button>
+      <button type="button" class="btn telegram" onclick="redirectToThankYou('telegram')">I prefer to join on Telegram</button>
     </form>
 
     <p style="font-size: 12px; color: #666; margin-top: 10px;">Your information is safe with us and will only be used for registration purposes.</p>
@@ -132,17 +132,15 @@
 
   <!-- Added JavaScript for validation and redirect -->
   <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      const form = event.target;
-      if (form.checkValidity()) {
-        // Fields are valid, redirect to thankyou.html without sending data
-        window.location.href = 'thankyou.html';
+    function redirectToThankYou(platform) {
+      const nameInput = document.getElementById('name');
+      if (nameInput.checkValidity()) {
+        let url = (platform === 'whatsapp') ? 'thankyou.html' : 'thankyoutg.html';
+        window.location.href = url;
       } else {
-        // Browser will show validation errors
-        form.reportValidity();
+        nameInput.reportValidity();
       }
-    });
+    }
   </script>
 </body>
 </html>
