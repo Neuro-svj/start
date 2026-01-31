@@ -9,9 +9,8 @@
   <script>
   !function (w, d, t) {
     w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
     ttq.load('D5CIUOBC77U9GK0PN0J0');
     ttq.page();
@@ -76,26 +75,15 @@
       margin: 10px auto 0;
       cursor: pointer;
       max-width: 300px;
+      border: none;
     }
     .whatsapp {
-      background: #25D366; /* Green for WhatsApp */
+      background: #25D366;
     }
     footer {
       margin-top: 14px;
       font-size: 12px;
       color: #666;
-    }
-    /* Added styles for the form */
-    form {
-      margin-top: 20px;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 12px;
-      margin: 8px 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-sizing: border-box;
     }
   </style>
 </head>
@@ -113,30 +101,22 @@
     </ul>
 
     <div class="affirmation">
-      <strong>YES!</strong> I’m ready to apply this life-changing information.
+      <strong>YES!</strong> I have these 3 things and I am going to apply this life-changing information once it is in my hands.
     </div>
 
-    <!-- Modified form for client-side validation -->
-    <form id="registrationForm">
-      <input type="text" id="name" name="name" placeholder="Your Name" required minlength="2">
-      <button type="button" class="btn whatsapp" onclick="redirectToThankYou('whatsapp')">Click here to Join Whatsapp group</button>
+    <form>
+      <button type="button" class="btn whatsapp" onclick="redirectToThankYou('whatsapp')">
+        CLICK HERE TO JOIN THE TRAINING NOW!
+      </button>
     </form>
 
-    <p style="font-size: 12px; color: #666; margin-top: 10px;">Your information is safe with us and will only be used for registration purposes.</p>
-
-    <footer>© 2026 High Posting Jobs</footer>
+    <footer>© 2026 HIGH POSTING JOBS</footer>
   </div>
 
-  <!-- Added JavaScript for validation and redirect -->
   <script>
     function redirectToThankYou(platform) {
-      const nameInput = document.getElementById('name');
-      if (nameInput.checkValidity()) {
-        let url = (platform === 'whatsapp') ? 'thankyou.html' : 'thankyoutg.html';
-        window.location.href = url;
-      } else {
-        nameInput.reportValidity();
-      }
+      let url = (platform === 'whatsapp') ? 'thankyou.html' : 'thankyoutg.html';
+      window.location.href = url;
     }
   </script>
 </body>
