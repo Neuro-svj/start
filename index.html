@@ -96,10 +96,12 @@
     <div class="affirmation">
       <strong>YES!</strong> I have these 3 things and I am going to apply this life-changing information once it is in my hands.
     </div>
-    <!-- CTA Button -->
+    
+    <!-- CTA Button with JavaScript Redirecting Feedback -->
     <button id="joinBtn" class="btn whatsapp" onclick="goToWhatsApp()">
       CLICK HERE TO JOIN THE TRAINING NOW!
     </button>
+    
     <footer>© 2026 HIGH POSTING JOBS</footer>
   </div>
 
@@ -109,11 +111,12 @@
     btn.disabled = true;
     btn.innerText = "Redirecting...";
 
-    // TikTok Conversion Event (optional but powerful)
+    // TikTok Conversion Event
     if (window.ttq) {
       ttq.track('CompleteRegistration');
     }
 
+    // Direct to WhatsApp group (no thank-you page, no name field)
     setTimeout(() => {
       window.location.href = "https://chat.whatsapp.com/Fwv83DNz5vQJwdXjmYSfsg?mode=gi_t";
     }, 500);
